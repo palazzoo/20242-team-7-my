@@ -1,0 +1,1 @@
+g++ -o Jogo main.cpp Partida.cpp Carta.cpp Baralho.cpp Jogador.cpp Unidade.cpp
