@@ -14,11 +14,11 @@ namespace PilotosPredefinidos{
     */
 
     const Piloto AmuroRay = Piloto("Unidade que pilota recebe PV+25. 
-                                    Caso a Unidade Pilotada tenha o nome “GUNDAM”,   
+                                    Caso a Unidade Pilotada tenha o nome \"GUNDAM\",   
                                     a unidade recebe Evasão.",
                                     NULL, 
                                     "Um heroi da guerra de um ano, pilotou o Mobile Suit RX-78-2 GUDAN
-                                    no lado da Federacao da Terra. Também conhecido como 'Diabo Branco'",
+                                    no lado da Federacao da Terra. Também conhecido como \"Diabo Branco\"",
                                     "Piloto",
                                     "Amuro Ray",
                                     4,
@@ -40,8 +40,8 @@ namespace PilotosPredefinidos{
                                            2,
                                            3);
 
-    const Piloto PilotoFederacao = Piloto("Caso existam 2 ou mais cópias de “Piloto da Federação” 
-                                             no campo, cada unidade pilotada por “Piloto da Federação”  
+    const Piloto PilotoFederacao = Piloto("Caso existam 2 ou mais cópias de \"Piloto da Federação\"
+                                             no campo, cada unidade pilotada por \"Piloto da Federação\"
                                              recebe PV+15",
                                              NULL,
                                             "Descricao",
@@ -71,8 +71,8 @@ namespace PilotosPredefinidos{
                                      "Ramba Ral",
                                      2,
                                      7);
-    const Piloto GenericoZeon = Piloto("Caso existam 2 ou mais cópias de “Piloto de Zeon” 
-                                        no campo, cada unidade pilotada por “Piloto de Zeon” 
+    const Piloto PilotoZeon = Piloto("Caso existam 2 ou mais cópias de \"Piloto de Zeon\" 
+                                        no campo, cada unidade pilotada por \"Piloto de Zeon\" 
                                         recebe ATK+15",
                                         NULL,
                                         "Descricao",
@@ -89,5 +89,3 @@ namespace PilotosPredefinidos{
 
 }
 
-
-std::string _efeito_piloto, Unidade _unidade_tripulada, std::string _Desc, std::string _Tipo, std::string _Nome, int _Custo, int _ID
