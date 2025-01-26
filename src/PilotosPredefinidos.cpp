@@ -13,22 +13,21 @@ namespace PilotosPredefinidos{
     
     */
 
-    const Piloto AmuroRay = Piloto("Ao ser despachado numa unidade afiliada a Federacao da Terra, 
-                                    compre uma carta para cada unidade da Federacao da Terra em campo.
-                                    Além , receba 1 de calor no início de cada turno, se esse piloto
-                                    estiver tripulando uma unidade da Federacao da Terra.",
+    const Piloto AmuroRay = Piloto("Unidade que pilota recebe PV+25. 
+                                    Caso a Unidade Pilotada tenha o nome “GUNDAM”,   
+                                    a unidade recebe Evasão.",
                                     NULL, 
                                     "Um heroi da guerra de um ano, pilotou o Mobile Suit RX-78-2 GUDAN
                                     no lado da Federacao da Terra. Também conhecido como 'Diabo Branco'",
-                                    NULL,
+                                    "Piloto",
                                     "Amuro Ray",
-                                    3,
+                                    4,
                                     1);
 
     const Piloto KayShiden = Piloto("Efeito",
                                      NULL,
                                      "Descricao",
-                                     NULL,
+                                     "Piloto",
                                      "Kay Shiden",
                                      3,
                                      2);
@@ -36,46 +35,50 @@ namespace PilotosPredefinidos{
     const Piloto HayatoKobayashi = Piloto("Efeito",
                                            NULL,
                                            "Descricao",
-                                           NULL,
+                                           "Piloto",
                                            "Hayato Kobayashi",
-                                           3,
+                                           2,
                                            3);
 
-    const Piloto GenericoFederacao = Piloto("Efeito",
+    const Piloto PilotoFederacao = Piloto("Caso existam 2 ou mais cópias de “Piloto da Federação” 
+                                             no campo, cada unidade pilotada por “Piloto da Federação”  
+                                             recebe PV+15",
                                              NULL,
                                             "Descricao",
-                                            NULL,
-                                            "Generico da Federacao",
-                                            3,
+                                            "Piloto",
+                                            "Piloto da Federacao",
+                                            1,
                                             4);
 
     const Piloto CharAznable = Piloto("Efeito",
                                       NULL,
                                       "Descricao",
-                                      NULL,
+                                      "Piloto",
                                       "Char Azanable",
-                                      3,
+                                      4,
                                       5);
     const Piloto DozleZabi = Piloto("Efeito",
                                      NULL,
                                      "Descricao",
-                                     NULL,
+                                     "Piloto",
                                      "Dozle Zabi",
                                      3,
                                      6);
      const Piloto RambaRal = Piloto("Efeito",
                                      NULL,
                                      "Descricao",
-                                     NULL,
+                                     "Piloto",
                                      "Ramba Ral",
-                                     3,
+                                     2,
                                      7);
-    const Piloto GenericoZeon = Piloto("Efeito",
+    const Piloto GenericoZeon = Piloto("Caso existam 2 ou mais cópias de “Piloto de Zeon” 
+                                        no campo, cada unidade pilotada por “Piloto de Zeon” 
+                                        recebe ATK+15",
                                         NULL,
                                         "Descricao",
-                                        NULL,
-                                        "Generico de Zeon",
-                                        3,
+                                        "Piloto",
+                                        "Piloto de Zeon",
+                                        1,
                                         8);
     
 
