@@ -1,0 +1,34 @@
+#ifndef JOGADOR_H
+#define JOGADOR_H
+
+#include "Carta.h"
+#include "Baralho.h"
+#include "Unidade.h"
+
+class Jogador{
+public:
+    int vida;
+    std::string nome;
+    std::vector<Carta*> mao;
+    int qtdCalor;
+    Baralho baralho;
+    std::vector<Carta*> pilhaDescarte;
+    std::vector<Carta*> campo;
+    bool vezDeJogar;
+
+    Jogador(int _vida, std::string _nome, int _qtdCalor, Baralho _baralho, bool _vezDeJogar);
+    void compra_carta(int qtd);
+    void joga_carta(int qtd);
+    void declara_efeito(Carta* c);
+    void encerra_turno();
+    void descarta();
+
+    void declara_ataque(Unidade atacante, Unidade defensora);
+    int getcalor();
+    void setcalor(int _calor);
+    int getVida();
+    std::string getNome();
+     
+    
+};
+#endif
