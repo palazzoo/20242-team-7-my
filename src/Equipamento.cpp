@@ -28,6 +28,7 @@ void Equipamento::fornece_efeito(Unidade unidade, Jogador jogador){
     // Se o equipamento tiver a habilidade de guarda, ativa a guarda na unidade
     if(guarda){
         unidade.ativa_guarda();
-}
+    }
+    // Aumenta o calor do jogador com base no calor extra do equipamento, por padrão é 0
     jogador.setcalor(jogador.getcalor() + calor_extra);
 }
