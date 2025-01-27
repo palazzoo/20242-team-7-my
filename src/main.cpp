@@ -1,6 +1,7 @@
 #include "../include/Partida.h"
 #include "../include/Carta.h"
 #include "../include/Jogador.h"
+#include "../include/Instantaneo.h"
 #include <iostream>
 
 int main(){

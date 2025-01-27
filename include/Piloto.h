@@ -3,7 +3,7 @@
 #include "Carta.h"
 #include <cstring>
 
-class Piloto: public: Carta{
+class Piloto : public Carta{
     private:
     std:: string efeito_piloto;
     Unidade unidade_tripulada;

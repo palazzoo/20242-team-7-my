@@ -28,5 +28,9 @@ void Carta::gera_calor(int qtd, Jogador& jogador){
 
  void Carta::fornece_efeito(){}
 
+void Carta::setCusto(int custo){
+    Custo = custo;
+}
+
 
 
