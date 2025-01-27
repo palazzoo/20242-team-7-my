@@ -25,6 +25,7 @@ public:
     void exibe_historico();
 
     void passa_turno();
+    int getTurno();
 };
 
 #endif

@@ -48,3 +48,7 @@ void Partida::passa_turno() {
     std::cout << "Proximo turno." << std::endl;
 }
 
+int Partida::getTurno() {
+    return turno;
+}
+
