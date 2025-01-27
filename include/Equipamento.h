@@ -16,4 +16,12 @@ class Equipamento : public Tatica{
         Equipamento(int atkextra, int hpextra, bool guarda, int _calor_extra, std::string _Desc, std::string _Tipo, std::string _Nome, int _Custo, int _ID);
         Equipamento(int atkextra, int hpextra, bool guarda, std::string _Desc, std::string _Tipo, std::string _Nome, int _Custo, int _ID);
 };
+
+namespace EquipamentosPredefinidos{
+    const Equipamento GundamHammer;
+    const Equipamento ArmaduraChobam;
+    const Equipamento UpgradeGundam;
+    const Equipamento ReatorPartículasMinovsky;
+}
 #endif
+

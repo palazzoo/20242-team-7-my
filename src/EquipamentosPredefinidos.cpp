@@ -13,7 +13,7 @@ int atk_extra,
 
 */
 
-namespace EquipamentoPredefinidos{
+namespace EquipamentosPredefinidos{
     const Equipamento GundamHammer = Equipamento(30, 0, false, "Desc",  "Equipamento",  "Gundam Hammer",  3, 31);
     const Equipamento ArmaduraChobam = Equipamento(0, 10, true, "Desc",  "Equipamento",  "Armadura de Chobam",  4, 32);
     const Equipamento UpgradeGundam = Equipamento(-20, -10, false, "Desc",  "Equipamento",  "Upgrade para o Gundam",  4, 33);
