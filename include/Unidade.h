@@ -24,7 +24,6 @@ class Unidade : public Carta {
         void recebe_efeito();
         void le()const;
         void ativa_guarda();
-        std::string getnome();
     };
 
 namespace UnidadesPredefinidas {

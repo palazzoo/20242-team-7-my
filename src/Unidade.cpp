@@ -57,7 +57,5 @@ void Unidade::ativa_guarda(){
     Guarda = true;
 }
 
-std::string Unidade::getnome(){
-    return Nome;
-}
+
 

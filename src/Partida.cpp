@@ -41,6 +41,9 @@ void Partida::exibe_historico() {
 }
 
 void Partida::passa_turno() {
+    // Troca o turno
+    // 0 -> Jogador 1
+    // 1 -> Jogador 2
     turno = (turno + 1) % 2;
     std::cout << "Proximo turno." << std::endl;
 }
