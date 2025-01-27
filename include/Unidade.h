@@ -9,6 +9,7 @@ class Unidade : public Carta {
         int Atk, Def, Hp; 
         bool Equip;         // Pilotado
         bool Guarda;
+        int calor_produzido;
     public:
         int getHp(); 
         void setHp(int _hp);
@@ -16,6 +17,7 @@ class Unidade : public Carta {
         void setAtk(int _atk);
         int getDef();
         Unidade(int Atk, int Def, int Hp, int Custo, std::string Desc, std::string Tipo, std::string Nome, bool Equip, int ID, bool Guarda);
+        Unidade(int Atk, int Def, int Hp, int Custo, std::string Desc, std::string Tipo, std::string Nome, bool Equip, int ID, bool Guarda, int calor_produzido = 0);
         void Atacar(Unidade &Outra);
         void receberDano(int dano);
         bool isEquiped();

@@ -15,6 +15,14 @@ int Unidade::getDef(){
 Unidade::Unidade(int _Atk, int _Def, int _Hp, int _Custo, std::string _Desc, std::string _Tipo, std::string _Nome, bool _Equip, int _ID, bool _guarda)
     : Carta(_Desc, _Tipo, _Nome, _Custo, _ID), Atk(_Atk), Def(_Def), Hp(_Hp), Equip(_Equip), Guarda(_guarda)  {}
 
+Unidade::Unidade(int _Atk, int _Def, int _Hp, int _Custo, std::string _Desc, std::string _Tipo, std::string _Nome, bool _Equip, int _ID, bool _guarda, int _calor_produzido)
+    : Carta(_Desc, _Tipo, _Nome, _Custo, _ID),
+    Atk(_Atk),
+    Def(_Def),
+    Hp(_Hp),
+    Equip(_Equip),
+    Guarda(_guarda),
+    calor_produzido(_calor_produzido)  {}
 
 void Unidade::receberDano(int dano){
     Hp -= dano;
