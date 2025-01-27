@@ -110,18 +110,18 @@ void Instantaneo::fornece_efeito(Jogador jogador, Jogador inimigo){
                 for (size_t i = 0; i < jogador.mao.size(); i++) {
                     if (jogador.mao[i] == carta) {
                         jogador.mao.erase(jogador.mao.begin() + i);
-                        break;  // Importante adicionar o break aqui
+                        break;  
                     }
                 }
 
-                // A unidade foi despachada para o campo
+                // despachar para o campo
                 unidadesDespachadas++;
                 std::cout << unidadesCustoBaixo[escolha - 1]->getnome() << " foi movida para o campo!" << std::endl;
             } else {
                 std::cout << "Escolha inválida, tente novamente." << std::endl;
             }
         }
-    break;  // Este break está correto agora.
+    break;  
 
 
     }
