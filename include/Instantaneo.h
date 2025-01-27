@@ -12,12 +12,13 @@ class Instantaneo : public Tatica{
 };
 
 namespace InstanteneoPredefinidos{
-    extern const Instantaneo Carta1;
-    extern const Instantaneo Carta2;
-    extern const Instantaneo Carta3;
-    extern const Instantaneo Carta4;
-    extern const Instantaneo Carta5;
-    extern const Instantaneo Carta6;
-    extern const Instantaneo Carta7;
+    const Instantaneo SistemaRaioSolar;
+    const Instantaneo ReforcosDaFederacao;
+    const Instantaneo OperacaoBritanica;
+    const Instantaneo NovaInvestida;
+    const Instantaneo INEUZaku;
+    const Instantaneo DesengajarCombate;
+    const Instantaneo CINADSN;
+    const Instantaneo ADCV;
 }
 #endif

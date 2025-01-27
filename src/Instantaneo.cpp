@@ -94,7 +94,7 @@ void Instantaneo::fornece_efeito(Jogador jogador, Jogador inimigo){
             std::cout << "Escolha uma unidade para mover para o campo (Digite o número):" << std::endl;
 
             for (int j = 0; j < unidadesCustoBaixo.size(); ++j) {
-                std::cout << j + 1 << ". " << unidadesCustoBaixo[j]->getnome() << " (Custo " << unidadesCustoBaixo[j]->getCusto() << ")" << std::endl;
+                std::cout << j + 1 << ". " << unidadesCustoBaixo[j]->getNome() << " (Custo " << unidadesCustoBaixo[j]->getCusto() << ")" << std::endl;
             }
 
             int escolha;
@@ -116,7 +116,7 @@ void Instantaneo::fornece_efeito(Jogador jogador, Jogador inimigo){
 
                 // despachar para o campo
                 unidadesDespachadas++;
-                std::cout << unidadesCustoBaixo[escolha - 1]->getnome() << " foi movida para o campo!" << std::endl;
+                std::cout << unidadesCustoBaixo[escolha - 1]->getNome() << " foi movida para o campo!" << std::endl;
             } else {
                 std::cout << "Escolha inválida, tente novamente." << std::endl;
             }
