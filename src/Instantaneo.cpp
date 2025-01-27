@@ -100,7 +100,7 @@ void Instantaneo::fornece_efeito(Jogador jogador, Jogador inimigo){
             int escolha;
             std::cin >> escolha;
 
-            // Validação da escolha
+            
             if (escolha >= 1 && escolha <= unidadesCustoBaixo.size()) {
                 // Adiciona a unidade ao campo
                 Carta* carta = unidadesCustoBaixo[escolha - 1];
