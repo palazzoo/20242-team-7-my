@@ -1,6 +1,6 @@
-   #include "Piloto.h"
-   #include "Carta.h
-   #include "Jogador.h
+   #include "../include/Piloto.h"
+   #include "../include/Carta.h"
+   #include "../include/Jogador.h"
    
    
    

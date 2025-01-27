@@ -2,12 +2,14 @@
 #define UNIDADE_H
 
 #include "Carta.h"
+#include <string>
 
 class Unidade : public Carta {
     private:
         int Atk, Def, Hp; 
         bool Equip;         // Pilotado
         bool Guarda;
+        int calor_produzido = 0; // Calor produzido pela unidade, por padrão é 0
     public:
         int getHp(); 
         void setHp(int _hp);
@@ -15,6 +17,7 @@ class Unidade : public Carta {
         void setAtk(int _atk);
         int getDef();
         Unidade(int Atk, int Def, int Hp, int Custo, std::string Desc, std::string Tipo, std::string Nome, bool Equip, int ID, bool Guarda);
+        Unidade(int Atk, int Def, int Hp, int Custo, std::string Desc, std::string Tipo, std::string Nome, bool Equip, int ID, bool Guarda, int calor_produzido);
         void Atacar(Unidade &Outra);
         void receberDano(int dano);
         bool isEquiped();

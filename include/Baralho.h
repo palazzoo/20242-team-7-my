@@ -6,13 +6,17 @@
 class Baralho {
 public:
     int quantidade;
-    std::vector<Carta*> lista;
+    std::vector<Carta*> cartas;
     std::string nome;
     int IDBaralho;
 
     Carta* seleciona_carta(int qtd);
 
     void adiciona_carta(Carta* carta);
+
+    int quantidade_cartas();
+
+    ~Baralho();
 };
 
 #endif

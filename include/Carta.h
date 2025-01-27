@@ -19,9 +19,11 @@ public:
     virtual int getID();
     virtual int getCusto();
     virtual std::string getTipo();
+    virtual std::string getNome();
     virtual void gasta_calor(int custo, Jogador &jogador);
     virtual void gera_calor(int qtd, Jogador &jogador);
     virtual void fornece_efeito();
+    virtual void setCusto(int custo);
     
 
 
