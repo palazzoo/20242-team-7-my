@@ -8,15 +8,19 @@
    
    
 
-   Piloto :: Piloto(std::string _efeito_piloto, Unidade _unidade_tripulada, std::string _Desc, std::string _Tipo, std::string _Nome, int _Custo, int _ID)
+Piloto :: Piloto(std::string _efeito_piloto, Unidade _unidade_tripulada, std::string _Desc, std::string _Tipo, std::string _Nome, int _Custo, int _ID)
     :Carta(_Desc, _Tipo, _Nome, _Custo, _ID),//Chama o construtor da superclasse
     unidade_tripulada(_unidade_tripulada),//Unidade do piloto
     efeito_piloto(_efeito_piloto){ //Efeito do piloto
     }
 
-    Piloto::~Piloto(){
+Piloto::~Piloto(){
         //Nada no destrutor, sem alocação dinâmica
     }
+
+Unidade Piloto::getUnidade(){
+    return unidade_tripulada;
+}
 
 void Piloto::fornece_efeito(Jogador& jog) {
     Jogador jogador = jog;
@@ -167,7 +171,7 @@ void Piloto::fornece_efeito(Jogador& jog) {
 
         default:
             break;
-        }
+        } }
 
 
     
