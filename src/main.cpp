@@ -59,20 +59,32 @@ void inicializaBaralho(Baralho& baralho) {
 int main() {
     // Cria um baralho com algumas cartas
     Baralho baralho;
+    baralho.quantidade = 10;
+    inicializaBaralho(baralho); // tenta adicionar as cartas ao baralho
+    std::cout << baralho.quantidade << std::endl;
+    
 
+
+    for(int j=0 ; j<31 ; j++)  {  // testa se foram adicionadas 
+        std::cout<<baralho.cartas[j]->getNome();
+        std::cout<<std::endl;
+    }
+    
     // Cria dois jogadores com o baralho    
     std::string j1, j2;
     std::cout << "Digite o nome do Jogador 1: ";
     std::cin >> j1;
     std::cout << "Digite o nome do Jogador 2: ";
     std::cin >> j2;
-    Jogador jogador1(100, j1, 20, baralho, true);
+    Jogador jogador1(100, j1, 20, baralho, true);  //Jogador::Jogador(int _vida, std::string _nome, int _qtdCalor, Baralho _baralho, bool _vezDeJogar) 
     Jogador jogador2(100, j2, 20, baralho, false);
 
-    int indice;
+    int indice=0;
 
+        
     for (int i = 0; i < 10 ; i++) {
         jogador1.compra_carta(i);
+        std::cout<<jogador1.mao[i]<<std::endl;
     }
     for (int j = 10; j < 20; j++) {
         jogador2.compra_carta(j);

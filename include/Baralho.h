@@ -17,6 +17,7 @@ public:
     int quantidade_cartas();
 
     ~Baralho();
+   
 };
 
 #endif

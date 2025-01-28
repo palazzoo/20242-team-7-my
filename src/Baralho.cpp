@@ -21,3 +21,4 @@ Baralho::~Baralho() {
         delete carta;
     }
 }
+

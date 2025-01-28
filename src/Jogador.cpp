@@ -2,20 +2,25 @@
 #include <algorithm>
 
 Jogador::Jogador(int _vida, std::string _nome, int _qtdCalor, Baralho _baralho, bool _vezDeJogar) 
-    : vida(_vida), nome(_nome), qtdCalor(_qtdCalor), baralho(_baralho), vezDeJogar(_vezDeJogar) {}
+    : vida(_vida), nome(_nome), qtdCalor(_qtdCalor), baralho(_baralho), vezDeJogar(_vezDeJogar) {
+        std::cout<<"Jogador "<<_nome<< " inicializado"<<std::endl;
+    }
 
-void Jogador::compra_carta(int indice) {
-    if (indice >= 0 && indice < baralho.quantidade_cartas()) {
-        Carta* carta = baralho.seleciona_carta(indice);
-        if (carta) {
-            mao.push_back(carta);
+void Jogador::compra_carta(int indice) {   
+    if (indice >= 0 && indice < baralho.quantidade_cartas()) {   //Verifica se o índice fornecido é válido para acessar uma carta no baralho
+        Carta* carta = baralho.seleciona_carta(indice); //Obtém a carta correspondente usando o método baralho.seleciona_carta(indice)
+        if (carta) {                //Verifica se a carta obtida é válida (não nula)
+            mao.push_back(carta);   //Se for válida, adiciona a carta ao vetor mao (mão do jogador).
+        }
+        else{
+            std::cout<<"Falha ao comprar carta!"<<std::endl; //se nao for valida, imprime erro
         }
     }
 }
 
 void Jogador::joga_carta(int indice) {
-    if (indice >= 0 && indice < mao.size()) {
-        Carta* carta = mao[indice];
+    if (indice >= 0 && indice < mao.size()) { 
+        Carta* carta = mao[indice];     
         campo.push_back(carta);
         mao.erase(mao.begin() + indice);
     }
