@@ -1,6 +1,8 @@
 #ifndef PILOTO_H
 #define PILOTO_H
 #include "Carta.h"
+#include "Unidade.h"
+#include "Jogador.h"
 #include <cstring>
 
 class Piloto : public Carta{
@@ -10,7 +12,7 @@ class Piloto : public Carta{
     public:
     Piloto(std::string _efeito_piloto, Unidade Unidade, std::string _Desc, std::string _Tipo, std::string _Nome, int _Custo, int _ID );
     ~Piloto();
-    void fornece_efeito() override;
+    void fornece_efeito(Jogador& jog);
     
 };
 
