@@ -18,10 +18,10 @@ class Equipamento : public Tatica{
 };
 
 namespace EquipamentosPredefinidos{
-    const Equipamento GundamHammer;
-    const Equipamento ArmaduraChobam;
-    const Equipamento UpgradeGundam;
-    const Equipamento ReatorPartículasMinovsky;
+    extern const Equipamento GundamHammer;
+    extern const Equipamento ArmaduraChobam;
+    extern const Equipamento UpgradeGundam;
+    extern const Equipamento ReatorPartículasMinovsky;
 }
 #endif
 

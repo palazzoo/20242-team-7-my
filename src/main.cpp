@@ -50,7 +50,11 @@ int main() {
             switch (opcao)
             {
             case 1:
-                jogador1.joga_carta(0);
+                int indice;
+                std::cout << "Digite o numero da carta: ";
+                std::cin >> indice;
+
+                jogador1.joga_carta(indice-1);
                 break;
             case 2:
                 std::cout << "Atacar\n";
@@ -109,23 +113,6 @@ int main() {
                 std::cout << "Opcao invalida\n";
                 break;
             }
-        }
-
-
-        // Jogador compra uma carta
-        if (partida.getTurno() == 0) {
-            jogador1.compra_carta(0); // Jogador 1 compra a primeira carta do baralho
-            jogador1.verMao();
-        } else {
-            jogador2.compra_carta(0); // Jogador 2 compra a primeira carta do baralho
-            jogador2.verMao();
-        }
-
-        // Jogador joga uma carta
-        if (partida.getTurno() == 0) {
-            jogador1.joga_carta(0); // Jogador 1 joga a primeira carta da mão
-        } else {
-            jogador2.joga_carta(0); // Jogador 2 joga a primeira carta da mão
         }
 
         // Passa o turno

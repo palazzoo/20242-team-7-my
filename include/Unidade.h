@@ -1,7 +1,7 @@
 #ifndef UNIDADE_H
 #define UNIDADE_H
 
-#include "Carta.h"
+#include "../include/Carta.h"
 #include <string>
 
 class Unidade : public Carta {

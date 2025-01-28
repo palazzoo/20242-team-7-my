@@ -1,4 +1,5 @@
 #include "../include/Instantaneo.h"
+#
 
 namespace InstanteneoPredefinidos{
     const Instantaneo SistemaRaioSolar = Instantaneo("Desc",  "Instantaneo",  "Sistema Raio Solar",  6, 21);
