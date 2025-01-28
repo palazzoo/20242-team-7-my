@@ -34,6 +34,7 @@ bool Partida::encerra_partida(bool _fim) {
             std::cout << "Empate!!!" << std::endl;
             return true;
         }
+        return false;
 }
 
 void Partida::exibe_historico() {

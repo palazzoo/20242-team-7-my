@@ -17,6 +17,7 @@ class Unidade : public Carta {
         int getAtk();
         void setAtk(int _atk);
         int getDef();
+        Unidade();
         Unidade(int Atk, int Def, int Hp, int Custo, std::string Desc, std::string Tipo, std::string Nome, bool Equip, int ID, bool Guarda);
         Unidade(int Atk, int Def, int Hp, int Custo, std::string Desc, std::string Tipo, std::string Nome, bool Equip, int ID, bool Guarda, int calor_produzido);
         void Atacar(Unidade &Outra);

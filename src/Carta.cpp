@@ -36,5 +36,8 @@ void Carta::setCusto(int custo){
     Custo = custo;
 }
 
-
+bool Carta::operator==(const Carta& other) const {
+        // Implementação da comparação
+        return this->ID == other.ID; // Exemplo de comparação
+    }
 

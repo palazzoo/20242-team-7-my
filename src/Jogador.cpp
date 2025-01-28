@@ -1,4 +1,5 @@
 #include "../include/Jogador.h"
+#include <algorithm>
 
 Jogador::Jogador(int _vida, std::string _nome, int _qtdCalor, Baralho _baralho, bool _vezDeJogar) 
     : vida(_vida), nome(_nome), qtdCalor(_qtdCalor), baralho(_baralho), vezDeJogar(_vezDeJogar) {}
@@ -30,12 +31,11 @@ void Jogador::verMao() {
 
 void Jogador::descarta(const Carta* carta) {
     // seleciona uma carta da mão e descarta
-    auto it = std::find(mao.begin(), mao.end(), carta);
+    auto it = std::find_if(mao.begin(), mao.end(), [&](const Carta* c) { return *c == *carta; });
     if (it != mao.end()) {
         pilha_descarte.push_back(*it);
         mao.erase(it);
     }
-
 }
 
 void Jogador::declara_ataque(Unidade atacante, Unidade defensora){
