@@ -59,9 +59,8 @@ void inicializaBaralho(Baralho& baralho) {
 int main() {
     // Cria um baralho com algumas cartas
     Baralho baralho;
-    inicializaBaralho(baralho);
 
-    // Cria dois jogadores com o baralho
+    // Cria dois jogadores com o baralho    
     std::string j1, j2;
     std::cout << "Digite o nome do Jogador 1: ";
     std::cin >> j1;
@@ -70,6 +69,7 @@ int main() {
     Jogador jogador1(100, j1, 20, baralho, true);
     Jogador jogador2(100, j2, 20, baralho, false);
 
+    int indice;
 
     for (int i = 0; i < 10 ; i++) {
         jogador1.compra_carta(i);
@@ -91,14 +91,13 @@ int main() {
             std::cout << "Mao Jogador: " << jogador1.getNome() << std::endl;
             jogador1.verMao();
 
-            std::cout << "1 - Jogar Carta\n2 - Atacar\n3 - Encerrar Turno\n4 - Encerrar Partida\n5 - Exibir Historico\n6 - Passar Turno\n7 - Sair\n";
+            std::cout << "1 - Jogar Carta\n2 - Atacar\n3 - \n4 - Encerrar Partida\n5 - Exibir Historico\n6 - Passar Turno\n7 - Sair\n";
             int opcao;
             std::cin >> opcao;
 
             switch (opcao)
             {
             case 1:
-                int indice;
                 std::cout << "Digite o numero da carta: ";
                 std::cin >> indice;
 
@@ -108,7 +107,6 @@ int main() {
                 std::cout << "Atacar\n";
                 break;
             case 3:
-                std::cout << "Encerrar Turno\n";
                 break;
             case 4:
                 partida.encerra_partida(true);
@@ -120,30 +118,33 @@ int main() {
                 partida.passa_turno();
                 break;
             case 7:
-                std::cout << "Sair\n";
+                std::cout << "Saindo\n";
+                partida.encerra_partida(true);
                 break;
             default:
                 std::cout << "Opcao invalida\n";
                 break;
             }
-        } else {
+        } else if (partida.getTurno() == 1) {
             std::cout << "Mao Jogador: " << jogador2.getNome() << std::endl;
             jogador2.verMao();
         
-            std::cout << "1 - Jogar Carta\n2 - Atacar\n3 - Encerrar Turno\n4 - Encerrar Partida\n5 - Exibir Historico\n6 - Passar Turno\n7 - Sair\n";
+            std::cout << "1 - Jogar Carta\n2 - Atacar\n3 - \n4 - Encerrar Partida\n5 - Exibir Historico\n6 - Passar Turno\n7 - Sair\n";
             int opcao;
             std::cin >> opcao;
 
             switch (opcao)
             {
             case 1:
+                std::cout << "Digite o numero da carta: ";
+                std::cin >> indice;
+                jogador1.joga_carta(indice-1);
                 jogador2.joga_carta(0);
                 break;
             case 2:
                 std::cout << "Atacar\n";
                 break;
             case 3:
-                std::cout << "Encerrar Turno\n";
                 break;
             case 4:
                 partida.encerra_partida(true);
@@ -155,7 +156,8 @@ int main() {
                 partida.passa_turno();
                 break;
             case 7:
-                std::cout << "Sair\n";
+                std::cout << "Saindo\n";
+                partida.encerra_partida(true);
                 break;
             default:
                 std::cout << "Opcao invalida\n";

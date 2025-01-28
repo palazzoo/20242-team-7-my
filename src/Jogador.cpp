@@ -22,7 +22,6 @@ void Jogador::joga_carta(int indice) {
 }
 
 void Jogador::verMao() {
-    std::cout << "Mao Jogador: " << getNome() << std::endl;
     for (int i = 0; i < mao.size(); ++i) {
         Carta* carta = mao[i];
         std::cout << "\t[" << i+1 << "] " << carta->getNome() << " " << carta->getTipo() <<  std::endl;
