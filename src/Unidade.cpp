@@ -25,9 +25,11 @@ Unidade::Unidade(int _Atk, int _Def, int _Hp, int _Custo, std::string _Desc, std
     calor_produzido(_calor_produzido)  {}
 
 void Unidade::receberDano(int dano){
-    Hp -= dano;
-    if(Hp<0)
+    if(Evasao==false){
+        Hp -= dano;
+        if(Hp<0)
         Hp=0;
+    }
 }
 
 void Unidade::Atacar(Unidade &Outra){
