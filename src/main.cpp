@@ -70,6 +70,14 @@ int main() {
     Jogador jogador1(100, j1, 20, baralho, true);
     Jogador jogador2(100, j2, 20, baralho, false);
 
+
+    for (int i = 0; i < 10 ; i++) {
+        jogador1.compra_carta(i);
+    }
+    for (int j = 10; j < 20; j++) {
+        jogador2.compra_carta(j);
+    }
+
     // Cria uma partida com os dois jogadores
     Partida partida(jogador1.getNome(), jogador2.getNome());
 
