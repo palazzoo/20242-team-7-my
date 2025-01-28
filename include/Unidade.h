@@ -10,6 +10,7 @@ class Unidade : public Carta {
         bool Equip;         // Pilotado
         bool Guarda;
         int calor_produzido = 0; // Calor produzido pela unidade, por padrão é 0
+        bool Evasao;
     public:
         int getHp(); 
         void setHp(int _hp);
@@ -24,6 +25,8 @@ class Unidade : public Carta {
         void recebe_efeito();
         void le()const;
         void ativa_guarda();
+        bool getEvasao();
+        void ativaEvasao();
     };
 
 namespace UnidadesPredefinidas {
