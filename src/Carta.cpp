@@ -14,9 +14,8 @@ std::string Carta::getTipo() {
     return Tipo;
 }
 
-std::string Carta::getNome(){
-    return Nome;
-}
+std::string Carta::getNome() const {  
+    return Nome;}
 
 Carta::Carta(std::string _Desc, std::string _Tipo, std::string _Nome, int _Custo, int _ID)
     : Descricao(_Desc), Tipo(_Tipo), Nome(_Nome), Custo(_Custo), ID(_ID) {}

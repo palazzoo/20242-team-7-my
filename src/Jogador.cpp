@@ -1,7 +1,11 @@
 #include "../include/Jogador.h"
+#include <algorithm>
 
 Jogador::Jogador(int _vida, std::string _nome, int _qtdCalor, Baralho _baralho, bool _vezDeJogar) 
     : vida(_vida), nome(_nome), qtdCalor(_qtdCalor), baralho(_baralho), vezDeJogar(_vezDeJogar) {}
+
+    Jogador::Jogador() 
+    : vida(100), nome("Jogador"), qtdCalor(0), vezDeJogar(false) {}
 
 void Jogador::compra_carta(int indice) {
     if (indice >= 0 && indice < baralho.quantidade_cartas()) {
@@ -54,4 +58,15 @@ int Jogador::getVida(){
 
 std::string Jogador::getNome(){
     return nome;
+}
+
+void Jogador::setHP(int hp){
+    vida = hp;
+}
+
+const std::vector<Carta*>& Jogador:: getCampo() const { 
+    return campo; 
+}
+std::vector<Carta*>& Jogador::getCampo() { 
+    return campo; 
 }

@@ -13,16 +13,17 @@ namespace PilotosPredefinidos{
     
     */
 
-    const Piloto AmuroRay = Piloto("Unidade que pilota recebe PV+25. 
-                                    Caso a Unidade Pilotada tenha o nome \"GUNDAM\",   
-                                    a unidade recebe Evasão.",
-                                    NULL, 
-                                    "Um heroi da guerra de um ano, pilotou o Mobile Suit RX-78-2 GUDAN
-                                    no lado da Federacao da Terra. Também conhecido como \"Diabo Branco\"",
-                                    "Piloto",
-                                    "Amuro Ray",
-                                    4,
-                                    1);
+    const Piloto AmuroRay = Piloto("Unidade que pilota recebe PV+25. "
+                                "Caso a Unidade Pilotada tenha o nome \"GUNDAM\", "
+                                "a unidade recebe Evasão.",
+                                NULL, 
+                                "Um heroi da guerra de um ano, pilotou o Mobile Suit RX-78-2 GUNDAM "
+                                "no lado da Federação da Terra. Também conhecido como \"Diabo Branco\"",
+                                "Piloto",
+                                "Amuro Ray",
+                                4,
+                                1);
+
 
     const Piloto KayShiden = Piloto("Efeito",
                                      NULL,
@@ -40,15 +41,16 @@ namespace PilotosPredefinidos{
                                            2,
                                            3);
 
-    const Piloto PilotoFederacao = Piloto("Caso existam 2 ou mais cópias de \"Piloto da Federação\"
-                                             no campo, cada unidade pilotada por \"Piloto da Federação\"
-                                             recebe PV+15",
-                                             NULL,
-                                            "Descricao",
-                                            "Piloto",
-                                            "Piloto da Federacao",
-                                            1,
-                                            4);
+    const Piloto PilotoFederacao = Piloto("Caso existam 2 ou mais cópias de \"Piloto da Federação\" "
+                                      "no campo, cada unidade pilotada por \"Piloto da Federação\" "
+                                      "recebe PV+15",
+                                      nullptr,
+                                      "Descricao",
+                                      "Piloto",
+                                      "Piloto da Federacao",
+                                      1,
+                                      4);
+
 
     const Piloto CharAznable = Piloto("Efeito",
                                       NULL,
@@ -71,15 +73,16 @@ namespace PilotosPredefinidos{
                                      "Ramba Ral",
                                      2,
                                      7);
-    const Piloto PilotoZeon = Piloto("Caso existam 2 ou mais cópias de \"Piloto de Zeon\" 
-                                        no campo, cada unidade pilotada por \"Piloto de Zeon\" 
-                                        recebe ATK+15",
-                                        NULL,
-                                        "Descricao",
-                                        "Piloto",
-                                        "Piloto de Zeon",
-                                        1,
-                                        8);
+    const Piloto PilotoZeon = Piloto("Caso existam 2 ou mais cópias de \"Piloto de Zeon\" "
+                                 "no campo, cada unidade pilotada por \"Piloto de Zeon\" "
+                                 "recebe ATK+15",
+                                 nullptr,
+                                 "Descricao",
+                                 "Piloto",
+                                 "Piloto de Zeon",
+                                 1,
+                                 8);
+
     
 
 

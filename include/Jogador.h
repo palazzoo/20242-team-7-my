@@ -15,7 +15,7 @@ public:
     std::vector<Carta*> pilha_descarte;
     std::vector<Carta*> campo;
     bool vezDeJogar;
-
+    Jogador();
     Jogador(int _vida, std::string _nome, int _qtdCalor, Baralho _baralho, bool _vezDeJogar);
     void compra_carta(int qtd);
     void joga_carta(int ID);
@@ -27,8 +27,12 @@ public:
     void declara_ataque(Unidade atacante, Unidade defensora);
     int getcalor();
     void setcalor(int _calor);
+    void setHP(int hp);
     int getVida();
     std::string getNome();
+    const std::vector<Carta*>& getCampo() const;
+    std::vector<Carta*>& getCampo();
+    
      
     
 };
