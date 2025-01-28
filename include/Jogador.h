@@ -16,7 +16,7 @@ public:
     std::vector<Carta*> campo;
     bool vezDeJogar;
 
-    Jogador(int _vida, std::string _nome, int _qtdCalor, Baralho _baralho, bool _vezDeJogar);
+    Jogador(int _vida, std::string _nome, int _qtdCalor, std::vector<Carta*> _mao, bool _vezDeJogar);
     void compra_carta(int qtd);
     void joga_carta(int ID);
     void declara_efeito(Carta* c);

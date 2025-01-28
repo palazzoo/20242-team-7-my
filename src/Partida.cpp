@@ -4,14 +4,15 @@
 #include "../include/Partida.h"
 
 
-Partida::Partida() : j1(VIDA_INICIAL, "Jogador 1", CALOR_INICIAL, Baralho(), true), j2(VIDA_INICIAL, "Jogador 2", CALOR_INICIAL, Baralho(), false) {
+Partida::Partida()
+    :   j1(VIDA_INICIAL, "Jogador 1", CALOR_INICIAL, {}, true), j2(VIDA_INICIAL, "Jogador 2", CALOR_INICIAL, {}, false) {
     tempo = 0;
     rodada = 0;
     historico = "";
     turno = 0;
 }
 Partida::Partida(std::string nome_j1, std::string nome_j2)
-    :  j1(VIDA_INICIAL, nome_j1, CALOR_INICIAL, Baralho(), true), j2(VIDA_INICIAL, nome_j2, CALOR_INICIAL, Baralho(), false) {
+    :  j1(VIDA_INICIAL, nome_j1, CALOR_INICIAL, {}, true), j2(VIDA_INICIAL, nome_j2, CALOR_INICIAL, {}, false) {
     tempo = 0;
     rodada = 0;
     historico = "";

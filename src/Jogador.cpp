@@ -1,8 +1,8 @@
 #include "../include/Jogador.h"
 #include <algorithm>
 
-Jogador::Jogador(int _vida, std::string _nome, int _qtdCalor, Baralho _baralho, bool _vezDeJogar) 
-    : vida(_vida), nome(_nome), qtdCalor(_qtdCalor), baralho(_baralho), vezDeJogar(_vezDeJogar) {}
+Jogador::Jogador(int _vida, std::string _nome, int _qtdCalor, std::vector<Carta*> _mao, bool _vezDeJogar)
+    : vida(_vida), nome(_nome), qtdCalor(_qtdCalor), mao(_mao), vezDeJogar(_vezDeJogar) {}
 
 void Jogador::compra_carta(int indice) {
     if (indice >= 0 && indice < baralho.quantidade_cartas()) {

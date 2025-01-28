@@ -59,6 +59,15 @@ void inicializaBaralho(Baralho& baralho) {
 int main() {
     // Cria um baralho com algumas cartas
     Baralho baralho;
+    inicializaBaralho(baralho);
+    //cabeçalho
+    std::cout << 
+    "| ----------------------------- Burning Steel Strife ---------------------------- |\n" <<
+    "| -------------------------------- Baralho criado-------------------------------- |\n" <<
+    "|                                                                                 |\n" <<
+    "| - Quantidade de cartas no baralho: " << baralho.quantidade_cartas()                    <<
+    " ----------------------------------------- |"<< std::endl;
+
 
     // Cria dois jogadores com o baralho    
     std::string j1, j2;
@@ -66,13 +75,19 @@ int main() {
     std::cin >> j1;
     std::cout << "Digite o nome do Jogador 2: ";
     std::cin >> j2;
-    Jogador jogador1(100, j1, 20, baralho, true);
-    Jogador jogador2(100, j2, 20, baralho, false);
+
+    
+    Jogador jogador1(20, j1, 0, {}, true);
+    Jogador jogador2(20, j2, 0, {}, false);
+    std::cout << "Jogadores criados\n";
+
+    std::cout << jogador1.getNome() << " x " << jogador2.getNome() << std::endl;
 
     int indice;
 
     for (int i = 0; i < 10 ; i++) {
         jogador1.compra_carta(i);
+        //imprime a carta comprada
     }
     for (int j = 10; j < 20; j++) {
         jogador2.compra_carta(j);
@@ -80,6 +95,7 @@ int main() {
 
     // Cria uma partida com os dois jogadores
     Partida partida(jogador1.getNome(), jogador2.getNome());
+    std::cout << "Partida iniciada\n";
 
     // Simula a partida
     while (!partida.encerra_partida(false)) {
